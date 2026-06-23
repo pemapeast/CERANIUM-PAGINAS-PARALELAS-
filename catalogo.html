@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Materiales – CERAMIUM · Pola de Laviana, Asturias</title>
+  <meta name="description" content="Catálogo completo de materiales de construcción de CERAMIUM: cerámica, cementos, herramientas, aislamiento y pavimentos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Barlow:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:          #1B2A3B;
+      --blue-mid:      #2C4A6E;
+      --blue-light:    #3A6EA8;
+      --sky:           #EBF3FB;
+      --gray-dark:     #3D4552;
+      --gray-mid:      #6B7585;
+      --surface:       #F5F6F8;
+      --white:         #FFFFFF;
+      --border:        #DDE2EA;
+      --accent-orange: #D4621A;
+      --radius-sm:     6px;
+      --radius-md:     12px;
+      --radius-lg:     20px;
+      --shadow-sm:     0 2px 8px rgba(27,42,59,.08);
+      --shadow-md:     0 6px 24px rgba(27,42,59,.12);
+      --transition:    0.28s cubic-bezier(.4,0,.2,1);
+      --font-head:     'Barlow', sans-serif;
+      --font-body:     'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-body); color: var(--navy); background: var(--white); line-height: 1.6; overflow-x: hidden; }
+    img  { display: block; width: 100%; object-fit: cover; }
+    a    { color: inherit; text-decoration: none; }
+    ul   { list-style: none; }
+
+    /* ── TOPBAR ── */
+    .topbar { background: var(--navy); color: rgba(255,255,255,.85); font-size: .8rem; padding: .45rem 0; }
+    .topbar-inner { max-width: 1220px; margin: auto; padding: 0 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .4rem; }
+    .topbar a { color: rgba(255,255,255,.85); }
+    .topbar a:hover { color: #fff; }
+    .topbar-contact { display: flex; gap: 1.6rem; flex-wrap: wrap; }
+    .topbar-contact span { display: flex; align-items: center; gap: .35rem; }
+    .topbar-contact svg { width: 13px; height: 13px; flex-shrink: 0; }
+    .topbar-right { font-size: .75rem; opacity: .7; }
+
+    /* ── HEADER ── */
+    header { position: sticky; top: 0; z-index: 900; background: var(--white); border-bottom: 1.5px solid var(--border); box-shadow: var(--shadow-sm); transition: box-shadow var(--transition); }
+    .nav-inner { max-width: 1220px; margin: auto; padding: .85rem 1.5rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+
+    .logo { display: flex; align-items: center; gap: .7rem; text-decoration: none; flex-shrink: 0; }
+    .logo-icon { width: 44px; height: 44px; background: var(--blue-mid); border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; }
+    .logo-icon svg { width: 26px; height: 26px; color: #fff; }
+    .logo-text { font-family: var(--font-head); line-height: 1.1; }
+    .logo-text strong { font-size: 1.35rem; font-weight: 800; letter-spacing: .04em; color: var(--navy); }
+    .logo-text span   { font-size: .68rem; font-weight: 500; color: var(--gray-mid); letter-spacing: .06em; display: block; }
+
+    .nav-links { display: flex; align-items: center; gap: 1.8rem; }
+    .nav-links a { font-size: .9rem; font-weight: 500; color: var(--gray-dark); position: relative; padding-bottom: 2px; transition: color var(--transition); }
+    .nav-links a::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:2px; background:var(--blue-light); transition: width var(--transition); }
+    .nav-links a:hover { color: var(--blue-light); }
+    .nav-links a:hover::after { width: 100%; }
+    .nav-links a.active { color: var(--blue-light); }
+    .nav-links a.active::after { width: 100%; }
+
+    .btn-nav-cta { background: var(--accent-orange) !important; color: #fff !important; padding: .5rem 1.1rem; border-radius: var(--radius-sm); font-weight: 600; font-size: .85rem; transition: background var(--transition), transform var(--transition); }
+    .btn-nav-cta::after { display: none !important; }
+    .btn-nav-cta:hover { background: #B8510F !important; transform: translateY(-1px); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: .3rem; background: none; border: none; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--navy); border-radius: 2px; transition: var(--transition); }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+    .mobile-nav { display: none; flex-direction: column; background: var(--white); border-top: 1px solid var(--border); }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { padding: .85rem 1.5rem; font-size: .95rem; font-weight: 500; color: var(--navy); border-bottom: 1px solid var(--border); transition: background var(--transition); }
+    .mobile-nav a:hover { background: var(--sky); }
+
+    /* ── HERO CATÁLOGO ── */
+    .cat-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue-mid) 100%);
+      padding: 3rem 1.5rem 2.8rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .cat-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .cat-hero-inner {
+      max-width: 1220px;
+      margin: auto;
+      position: relative;
+      z-index: 1;
+    }
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      font-size: .78rem;
+      color: rgba(255,255,255,.55);
+      margin-bottom: 1.2rem;
+    }
+    .breadcrumb a { color: rgba(255,255,255,.65); transition: color var(--transition); }
+    .breadcrumb a:hover { color: #fff; }
+    .breadcrumb svg { width: 12px; height: 12px; flex-shrink: 0; }
+
+    .cat-hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: .6rem;
+    }
+    .cat-hero p { font-size: .98rem; color: rgba(255,255,255,.72); max-width: 560px; }
+
+    /* ── LAYOUT PRINCIPAL ── */
+    .catalog-layout {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 5rem;
+      display: grid;
+      grid-template-columns: 230px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+    }
+
+    /* ── SIDEBAR FILTROS ── */
+    .sidebar {
+      position: sticky;
+      top: 90px;
+    }
+    .sidebar-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      margin-bottom: 1rem;
+    }
+    .sidebar-block h3 {
+      font-family: var(--font-head);
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+      margin-bottom: 1rem;
+    }
+    .sidebar-cats { display: flex; flex-direction: column; gap: .25rem; }
+    .sidebar-cat-btn {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      padding: .6rem .8rem;
+      border: none;
+      background: transparent;
+      border-radius: var(--radius-sm);
+      font-size: .88rem;
+      font-weight: 500;
+      color: var(--gray-dark);
+      cursor: pointer;
+      transition: background var(--transition), color var(--transition);
+      text-align: left;
+      width: 100%;
+    }
+    .sidebar-cat-btn:hover { background: var(--sky); color: var(--blue-light); }
+    .sidebar-cat-btn.active { background: var(--navy); color: #fff; font-weight: 700; }
+    .sidebar-cat-btn .cat-icon { font-size: 1.1rem; width: 22px; text-align: center; flex-shrink: 0; }
+    .sidebar-cat-btn .cat-count {
+      margin-left: auto;
+      font-size: .72rem;
+      background: rgba(0,0,0,.08);
+      padding: .1rem .45rem;
+      border-radius: 100px;
+      font-weight: 600;
+    }
+    .sidebar-cat-btn.active .cat-count { background: rgba(255,255,255,.2); }
+
+    .sidebar-cta {
+      background: var(--navy);
+      border-radius: var(--radius-md);
+      padding: 1.4rem;
+      text-align: center;
+    }
+    .sidebar-cta p { font-size: .82rem; color: rgba(255,255,255,.75); margin-bottom: 1rem; line-height: 1.6; }
+    .sidebar-cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      background: var(--accent-orange);
+      color: #fff;
+      padding: .6rem 1.1rem;
+      border-radius: var(--radius-sm);
+      font-size: .83rem;
+      font-weight: 700;
+      transition: background var(--transition);
+    }
+    .sidebar-cta a:hover { background: #B8510F; }
+
+    /* ── ÁREA PRODUCTOS ── */
+    .products-area {}
+
+    /* Barra superior del grid */
+    .products-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .products-topbar h2 {
+      font-family: var(--font-head);
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+    .products-topbar h2 span {
+      font-size: .85rem;
+      font-weight: 500;
+      color: var(--gray-mid);
+      margin-left: .5rem;
+    }
+
+    /* Chips filtro rápido (móvil) */
+    .filter-chips {
+      display: none;
+      gap: .5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+    .chip {
+      padding: .4rem .9rem;
+      border: 1.5px solid var(--border);
+      border-radius: 100px;
+      background: var(--white);
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--gray-dark);
+      cursor: pointer;
+      transition: all var(--transition);
+      white-space: nowrap;
+    }
+    .chip:hover  { border-color: var(--blue-light); color: var(--blue-light); }
+    .chip.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+
+    /* Grid de productos */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.4rem;
+    }
+
+    /* Tarjeta producto */
+    .product-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .product-card:hover { box-shadow: var(--shadow-md); transform: translateY(-5px); }
+    .product-card.hidden { display: none; }
+
+    .product-img {
+      height: 185px;
+      background: var(--surface);
+      position: relative;
+      overflow: hidden;
+    }
+    .product-img img { height: 100%; transition: transform .5s ease; }
+    .product-card:hover .product-img img { transform: scale(1.06); }
+
+    .product-badge {
+      position: absolute;
+      top: .7rem; left: .7rem;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .25rem .65rem;
+      border-radius: 100px;
+      color: #fff;
+    }
+    .badge-dest { background: var(--navy); }
+    .badge-new  { background: var(--accent-orange); }
+    .badge-pro  { background: var(--blue-light); }
+
+    .product-body { padding: 1.1rem 1.2rem 1.3rem; }
+    .product-cat  { font-size: .68rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--blue-light); margin-bottom: .3rem; }
+    .product-name { font-family: var(--font-head); font-size: .98rem; font-weight: 700; color: var(--navy); margin-bottom: .4rem; line-height: 1.3; }
+    .product-desc { font-size: .79rem; color: var(--gray-mid); line-height: 1.55; margin-bottom: 1rem; }
+
+    .btn-consultar {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      width: 100%;
+      justify-content: center;
+      padding: .58rem 1rem;
+      border: 2px solid var(--blue-mid);
+      border-radius: var(--radius-sm);
+      color: var(--blue-mid);
+      font-size: .81rem;
+      font-weight: 700;
+      background: transparent;
+      cursor: pointer;
+      transition: background var(--transition), color var(--transition), transform var(--transition);
+      font-family: var(--font-body);
+    }
+    .btn-consultar:hover { background: var(--blue-mid); color: #fff; transform: translateY(-1px); }
+    .btn-consultar svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    /* Sin resultados */
+    .empty-state {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      text-align: center;
+      color: var(--gray-mid);
+      grid-column: 1 / -1;
+    }
+    .empty-state.show { display: flex; }
+    .empty-state svg { width: 48px; height: 48px; margin-bottom: 1rem; opacity: .35; }
+    .empty-state h4   { font-size: 1rem; font-weight: 700; color: var(--navy); margin-bottom: .4rem; }
+    .empty-state p    { font-size: .85rem; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--navy); color: rgba(255,255,255,.75); padding: 3.5rem 1.5rem 1.5rem; }
+    .footer-inner { max-width: 1220px; margin: auto; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.3fr; gap: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid rgba(255,255,255,.1); }
+    .footer-brand .logo-text strong { color: #fff; font-size: 1.5rem; }
+    .footer-brand .logo-text span   { color: rgba(255,255,255,.5); }
+    .footer-brand p { font-size: .82rem; margin-top: 1rem; line-height: 1.7; max-width: 280px; }
+    .footer-col h5 { font-family: var(--font-head); font-size: .85rem; font-weight: 700; color: #fff; letter-spacing: .05em; text-transform: uppercase; margin-bottom: 1rem; }
+    .footer-col ul { display: flex; flex-direction: column; gap: .55rem; }
+    .footer-col ul li a { font-size: .82rem; color: rgba(255,255,255,.65); transition: color var(--transition); }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-schedule { font-size: .8rem; line-height: 1.9; }
+    .footer-schedule strong { color: #fff; }
+    .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; font-size: .75rem; color: rgba(255,255,255,.4); }
+    .footer-legal { display: flex; gap: 1.3rem; }
+    .footer-legal a { color: rgba(255,255,255,.4); transition: color var(--transition); }
+    .footer-legal a:hover { color: rgba(255,255,255,.75); }
+
+    /* ── ANIMACIONES ── */
+    @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .55s ease, transform .55s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── TOAST FORMULARIO ── */
+    .toast { display: none; padding: 1rem 1.4rem; border-radius: var(--radius-sm); font-size: .88rem; font-weight: 600; margin-top: 1rem; align-items: center; gap: .5rem; }
+    .toast.show { display: flex; }
+    .toast.ok  { background: #1D7A42; color: #fff; }
+    .toast.err { background: #A32D2D; color: #fff; }
+    .toast svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+    /* ── MODAL CONSULTA ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(27,42,59,.55);
+      backdrop-filter: blur(4px);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: 2rem 2.2rem 2.2rem;
+      width: 100%;
+      max-width: 520px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      animation: modalIn .25s ease;
+    }
+    @keyframes modalIn { from { opacity:0; transform: scale(.95) translateY(12px); } to { opacity:1; transform: scale(1) translateY(0); } }
+    .modal-close {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      background: var(--surface);
+      border: none;
+      border-radius: 50%;
+      width: 32px; height: 32px;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      color: var(--gray-dark);
+      transition: background var(--transition);
+    }
+    .modal-close:hover { background: var(--border); }
+    .modal-close svg { width: 16px; height: 16px; }
+    .modal h3 { font-family: var(--font-head); font-size: 1.2rem; font-weight: 800; color: var(--navy); margin-bottom: .35rem; padding-right: 2rem; }
+    .modal-product-ref { font-size: .78rem; color: var(--blue-light); font-weight: 600; margin-bottom: 1.4rem; letter-spacing: .04em; }
+
+    .form-group { display: flex; flex-direction: column; gap: .4rem; margin-bottom: .9rem; }
+    .form-group label { font-size: .78rem; font-weight: 600; color: var(--gray-dark); }
+    .form-group input,
+    .form-group select,
+    .form-group textarea { padding: .65rem .95rem; border: 1.5px solid var(--border); border-radius: var(--radius-sm); font-size: .88rem; font-family: var(--font-body); color: var(--navy); background: var(--white); transition: border-color var(--transition), box-shadow var(--transition); outline: none; }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus { border-color: var(--blue-light); box-shadow: 0 0 0 3px rgba(58,110,168,.15); }
+    .form-group textarea { resize: vertical; min-height: 90px; }
+    .form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+
+    .btn-submit {
+      width: 100%; padding: .85rem; background: var(--navy); color: #fff; border: none;
+      border-radius: var(--radius-sm); font-size: .95rem; font-weight: 700;
+      font-family: var(--font-body); cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+      display: flex; align-items: center; justify-content: center; gap: .5rem;
+      margin-top: .4rem;
+    }
+    .btn-submit:hover    { background: var(--blue-mid); transform: translateY(-1px); }
+    .btn-submit:disabled { opacity: .7; cursor: not-allowed; transform: none; }
+    .form-note { font-size: .71rem; color: var(--gray-mid); text-align: center; margin-top: .7rem; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 860px) {
+      .catalog-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; display: none; }
+      .sidebar.mobile-open { display: block; }
+      .filter-chips { display: flex; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .footer-brand p { max-width: 100%; }
+      .form-row-2 { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 500px) {
+      .topbar-contact { gap: .8rem; }
+      .products-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="topbar-contact">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.65 3.36 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16a2 2 0 0 0 .27.92z"/></svg>
+          <a href="tel:+34985000000">985 00 00 00</a>
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@ceramium.es">info@ceramium.es</a>
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Pola de Laviana, Asturias
+        </span>
+      </div>
+      <div class="topbar-right">Lun–Vie 8:00–19:00 · Sáb 8:00–14:00</div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="CERAMIUM inicio">
+        <div class="logo-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="5" rx="1"/><rect x="2" y="13" width="20" height="5" rx="1"/><line x1="7" y1="6" x2="7" y2="2"/><line x1="17" y1="6" x2="17" y2="2"/><line x1="7" y1="18" x2="7" y2="22"/><line x1="17" y1="18" x2="17" y2="22"/></svg>
+        </div>
+        <div class="logo-text">
+          <strong>CERAMIUM</strong>
+          <span>Materiales de Construcción</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="catalogo.html" class="active">Catálogo</a>
+        <a href="index.html#servicios">Servicios</a>
+        <a href="index.html#contacto">Contacto</a>
+        <a href="index.html#contacto" class="btn-nav-cta">Pedir presupuesto</a>
+      </nav>
+
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Menú móvil">
+      <a href="index.html"         onclick="closeMobileNav()">Inicio</a>
+      <a href="catalogo.html"      onclick="closeMobileNav()">Catálogo</a>
+      <a href="index.html#servicios" onclick="closeMobileNav()">Servicios</a>
+      <a href="index.html#contacto"  onclick="closeMobileNav()">Contacto</a>
+      <a href="index.html#contacto"  onclick="closeMobileNav()" style="color:var(--accent-orange);font-weight:700;">Pedir presupuesto</a>
+    </nav>
+  </header>
+
+  <!-- HERO CATÁLOGO -->
+  <section class="cat-hero">
+    <div class="cat-hero-inner">
+      <div class="breadcrumb">
+        <a href="index.html">Inicio</a>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+        <span>Catálogo</span>
+      </div>
+      <h1>Catálogo de materiales</h1>
+      <p>Consulta nuestra selección de productos. Filtra por categoría y solicita disponibilidad o presupuesto sin compromiso.</p>
+    </div>
+  </section>
+
+  <!-- LAYOUT PRINCIPAL -->
+  <div class="catalog-layout">
+
+    <!-- SIDEBAR (escritorio) -->
+    <aside class="sidebar" id="sidebar" aria-label="Filtros por categoría">
+      <div class="sidebar-block">
+        <h3>Categorías</h3>
+        <div class="sidebar-cats">
+          <button class="sidebar-cat-btn active" data-filter="todos">
+            <span class="cat-icon">📦</span> Todos los productos
+            <span class="cat-count" id="cnt-todos">12</span>
+          </button>
+          <button class="sidebar-cat-btn" data-filter="ceramica">
+            <span class="cat-icon">🏺</span> Cerámica
+            <span class="cat-count" id="cnt-ceramica">3</span>
+          </button>
+          <button class="sidebar-cat-btn" data-filter="cementos">
+            <span class="cat-icon">🧱</span> Cementos
+            <span class="cat-count" id="cnt-cementos">3</span>
+          </button>
+          <button class="sidebar-cat-btn" data-filter="herramientas">
+            <span class="cat-icon">🔧</span> Herramientas
+            <span class="cat-count" id="cnt-herramientas">2</span>
+          </button>
+          <button class="sidebar-cat-btn" data-filter="aislamiento">
+            <span class="cat-icon">🏠</span> Aislamiento
+            <span class="cat-count" id="cnt-aislamiento">2</span>
+          </button>
+          <button class="sidebar-cat-btn" data-filter="pavimentos">
+            <span class="cat-icon">🟫</span> Pavimentos
+            <span class="cat-count" id="cnt-pavimentos">2</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="sidebar-cta">
+        <p>¿No encuentras lo que buscas? Consúltanos directamente.</p>
+        <a href="index.html#contacto">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.36 2 2 0 013.62 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.6a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.73 16a2 2 0 00.27.92z"/></svg>
+          Contactar ahora
+        </a>
+      </div>
+    </aside>
+
+    <!-- ÁREA DE PRODUCTOS -->
+    <div class="products-area">
+
+      <!-- Chips móvil -->
+      <div class="filter-chips" role="group" aria-label="Filtros rápidos">
+        <button class="chip active" data-filter="todos">Todos</button>
+        <button class="chip" data-filter="ceramica">🏺 Cerámica</button>
+        <button class="chip" data-filter="cementos">🧱 Cementos</button>
+        <button class="chip" data-filter="herramientas">🔧 Herramientas</button>
+        <button class="chip" data-filter="aislamiento">🏠 Aislamiento</button>
+        <button class="chip" data-filter="pavimentos">🟫 Pavimentos</button>
+      </div>
+
+      <!-- Barra superior -->
+      <div class="products-topbar">
+        <h2 id="areaTitle">Todos los productos <span id="areaCount">(12 artículos)</span></h2>
+      </div>
+
+      <!-- Grid -->
+      <div class="products-grid" id="productsGrid">
+
+        <!-- ═══ CERÁMICA ═══ -->
+        <article class="product-card reveal" data-cat="ceramica">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=200&fit=crop&auto=format" alt="Azulejo cerámico blanco mate" loading="lazy" />
+            <span class="product-badge badge-dest">Destacado</span>
+          </div>
+          <div class="product-body">
+            <div class="product-cat">Cerámica</div>
+            <h3 class="product-name">Azulejo cerámico blanco mate</h3>
+            <p class="product-desc">Formato 30×60 cm. Acabado mate resistente, ideal para revestimiento de paredes en baños y cocinas. Alta durabilidad y fácil limpieza.</p>
+            <button class="btn-consultar" onclick="openModal('Azulejo cerámico blanco mate','ceramica')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.36 2 2 0 013.62 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.6a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.73 16a2 2 0 00.27.92z"/></svg>
+              Consultar disponibilidad
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-cat="ceramica">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1584622781867-1c5fe959a065?w=400&h=200&fit=crop&auto=format" alt="Baldosa imitación mármol gris" loading="lazy" />
+            <span class="product-badge badge-new">Novedad</span>
+          </div>
+          <div class="product-body">
+            <div class="product-cat">Cerámica</div>
+            <h3 class="product-name">Baldosa imitación mármol gris</h3>
+            <p class="product-desc">Formato 60×120 cm. Efecto mármol de alta definición con acabado pulido. Perfecta para salones, halls y zonas de representación.</p>
+            <button class="btn-consultar" onclick="openModal('Baldosa imitación mármol gris','ceramica')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.36 2 2 0 013.62 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.6a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.73 16a2 2 0 00.27.92z"/></svg>
+              Consultar disponibilidad
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-cat="ceramica">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1572627781546-a7b68fcf37f8?w=400&h=200&fit=crop&auto=format" alt="Gres porcelánico exterior antideslizante" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-cat">Cerámica</div>
+            <h3 class="product-name">Gres porcelánico exterior</h3>
+            <p class="product-desc">Antideslizante, resistente a heladas y a la intemperie. Formato 45×45 cm. Ideal para terrazas, jardines y zonas de paso exterior.</p>
+            <button class="btn-consultar" onclick="openModal('Gres porcelánico exterior','ceramica')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.36 2 2 0 013.62 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.6a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.73 16a2 2 0 00.27.92z"/></svg>
+              Consultar disponibilidad
+            </button>
+          </div>
+        </article>
+
+        <!-- ═══ CEMENTOS ═══ -->
+        <article class="product-card reveal" data-cat="cementos">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=200&fit=crop&auto=format" alt="Cemento Portland gris CEM II" loading="lazy" />
+            <span class="product-badge badge-dest">Más vendido</span>
+          </div>
+          <div class="product-body">
+            <div class="product-cat">Cementos</div>
+            <h3 class="product-name">Cemento Portland gris CEM II</h3>
+            <p class="product-desc">Saco de 25 kg. Alta resistencia inicial y excelente trabajabilidad. Para hormigonados, morteros y fábricas de ladrillo y bloque.</p>
+            <button class="btn-consultar" onclick="openModal('Cemento Portland gris CEM II','cementos')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.36 2 2 0 013.62 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.6a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.73 16a2 2 0 00.27.92z"/></svg>
+              Consultar disponibilidad
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-cat="cementos">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?w=400&h=200&fit=crop&auto=format" alt="Mortero cola C2 para alicatado" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-cat">Cementos</div>
+            <h3 class="product-name">Mortero cola C2 para alicatado</h3>
+            <p class="product-desc">Saco de 20 kg. Adhesivo cementoso mejorado, clase C2. Para colocación de cerámica, gres porcelánico y grandes formatos en suelos y paredes.</p>
+            <button class="btn-consultar" onclick="openModal('Mortero cola C2 para alicatado','cementos')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.36 2 2 0 013.62 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.6a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.73 16a2 2 0 00.27.92z"/></svg>
+              Consultar disponibilidad
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-cat="cementos">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1561681651-98e0a54bbf7c?w=400&h=200&fit=crop&auto=format" alt="Yeso proyectable B1 para interiores" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-cat">Cementos</div>
+            <h3 class="product-name">Yeso proyectable B1 para interiores</h3>
+            <p class="product-desc">Saco de 25 kg. Yeso semihidratado de alta pureza para revestimientos interiores. Fraguado controlado y excelente acabado superficial.</p>
+            <button class="btn-consultar" onclick="openModal('Yeso proyectable B1','cementos')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.36 2 2 0 013.62 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.6a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.73 16a2 2 0 00.27.92z"/></svg>
+              Consultar disponibilidad
+            </button>
+          </div>
+        </article>
+
+        <!-- ═══ HERRAMIENTAS ═══ -->
+        <article class="product-card reveal" data-cat="herramientas">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=400&h=200&fit=crop&auto=format" alt="Cortadora de azulejos profesional" loading="lazy" />
+            <span class="product-badge badge-pro">Pro</span>
+          </div>
+          <div class="product-body">
+            <div class="product-cat">Herramientas</div>
+            <h3 class="product-name">Cortadora de azulejos profesional</h3>
+            <p class="product-desc">Cortadora manual de 90 cm de alcance. Carro de aluminio, guía de corte de acero inoxidable. Para cerámica, gres y porcelánico hasta 12 mm.</p>
+            <button class="btn-consultar" onclick="openModal('Cortadora de azulejos profesional','herramientas')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.36 2 2 0 013.62 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.6a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.73 16a2 2 0 00.27.92z"/></svg>
+              Consultar disponibilidad
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-cat="herramientas">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=400&h=200&fit=crop&auto=format" alt="Mezclador de mortero eléctrico" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-cat">Herramientas</div>
+            <h3 class="product-name">Mezclador de mortero eléctrico</h3>
+            <p class="product-desc">1600 W, velocidad variable. Mango ergonómico con doble empuñadura. Apto para morteros, colas, yeso y pintura. Batidor de 140 mm incluido.</p>
+            <button class="btn-consultar" onclick="openModal('Mezclador de mortero eléctrico','herramientas')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.36 2 2 0 013.62 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.6a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.73 16a2 2 0 00.27.92z"/></svg>
+              Consultar disponibilidad
+            </button>
+          </div>
+        </article>
+
+        <!-- ═══ AISLAMIENTO ═══ -->
+        <article class="product-card reveal" data-cat="aislamiento">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=200&fit=crop&auto=format" alt="Panel de lana de roca 60 mm" loading="lazy" />
+            <span class="product-badge badge-new">Novedad</span>
+          </div>
+          <div class="product-body">
+            <div class="product-cat">Aislamiento</div>
+            <h3 class="product-name">Panel de lana de roca 60 mm</h3>
+            <p class="product-desc">Aislamiento térmico y acústico de alto rendimiento. Lambda 0,034 W/mK. Para fachadas ventiladas, cubiertas y particiones interiores.</p>
+            <button class="btn-consultar" onclick="openModal('Panel de lana de roca 60 mm','aislamiento')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.36 2 2 0 013.62 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.6a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.73 16a2 2 0 00.27.92z"/></svg>
+              Consultar disponibilidad
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-cat="aislamiento">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1565014047634-06ba7c9e2e36?w=400&h=200&fit=crop&auto=format" alt="Poliestireno EPS 100 para SATE" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-cat">Aislamiento</div>
+            <h3 class="product-name">Poliestireno EPS 100 para SATE</h3>
+            <p class="product-desc">Planchas de 100 mm. Sistema de aislamiento térmico exterior. Bajo peso, fácil instalación y óptima resistencia a la compresión (CS10/100).</p>
+            <button class="btn-consultar" onclick="openModal('Poliestireno EPS 100 para SATE','aislamiento')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.36 2 2 0 013.62 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.6a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.73 16a2 2 0 00.27.92z"/></svg>
+              Consultar disponibilidad
+            </button>
+          </div>
+        </article>
+
+        <!-- ═══ PAVIMENTOS ═══ -->
+        <article class="product-card reveal" data-cat="pavimentos">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=200&fit=crop&auto=format" alt="Parquet laminado roble natural AC5" loading="lazy" />
+            <span class="product-badge badge-dest">Destacado</span>
+          </div>
+          <div class="product-body">
+            <div class="product-cat">Pavimentos</div>
+            <h3 class="product-name">Parquet laminado roble natural AC5</h3>
+            <p class="product-desc">12 mm de espesor. Clase de uso AC5. Sistema clic de instalación rápida. Resistente a arañazos y tráfico intenso. Con base aislante incluida.</p>
+            <button class="btn-consultar" onclick="openModal('Parquet laminado roble natural AC5','pavimentos')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.36 2 2 0 013.62 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.6a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.73 16a2 2 0 00.27.92z"/></svg>
+              Consultar disponibilidad
+            </button>
+          </div>
+        </article>
+
+        <article class="product-card reveal" data-cat="pavimentos">
+          <div class="product-img">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&h=200&fit=crop&auto=format" alt="Tarima exterior tratada en autoclave" loading="lazy" />
+          </div>
+          <div class="product-body">
+            <div class="product-cat">Pavimentos</div>
+            <h3 class="product-name">Tarima exterior tratada en autoclave</h3>
+            <p class="product-desc">Madera de pino tratada clase IV. 28×145 mm. Resistente a la intemperie, insectos y humedad. Para terrazas, jardines y piscinas.</p>
+            <button class="btn-consultar" onclick="openModal('Tarima exterior tratada en autoclave','pavimentos')">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12 19.79 19.79 0 011.65 3.36 2 2 0 013.62 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.6a16 16 0 006 6l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0121.73 16a2 2 0 00.27.92z"/></svg>
+              Consultar disponibilidad
+            </button>
+          </div>
+        </article>
+
+        <!-- Estado vacío -->
+        <div class="empty-state" id="emptyState">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <h4>Sin resultados</h4>
+          <p>No hay productos en esta categoría por el momento.</p>
+        </div>
+
+      </div><!-- /products-grid -->
+    </div><!-- /products-area -->
+  </div><!-- /catalog-layout -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text"><strong>CERAMIUM</strong><span>Materiales de Construcción</span></div>
+          <p>Tu almacén de materiales de construcción de confianza en Pola de Laviana. Servimos a toda Asturias con calidad, stock y asesoramiento profesional.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Secciones</h5>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="catalogo.html">Catálogo</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Materiales</h5>
+          <ul>
+            <li><a href="catalogo.html?cat=ceramica">Cerámica y azulejos</a></li>
+            <li><a href="catalogo.html?cat=cementos">Cementos y morteros</a></li>
+            <li><a href="catalogo.html?cat=herramientas">Herramientas</a></li>
+            <li><a href="catalogo.html?cat=aislamiento">Aislamiento</a></li>
+            <li><a href="catalogo.html?cat=pavimentos">Pavimentos</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Horario y ubicación</h5>
+          <div class="footer-schedule">
+            <strong>Lunes – Viernes</strong><br>8:00 – 19:00 h<br><br>
+            <strong>Sábados</strong><br>8:00 – 14:00 h<br><br>
+            <strong>Domingos y festivos</strong><br>Cerrado<br><br>
+            <strong>Dirección</strong><br>Pola de Laviana, 33989<br>Laviana, Asturias<br>
+            <span style="font-size:.73rem;opacity:.6;">Ref. Plus Code: 6CXM+2P</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 CERAMIUM – Materiales de Construcción. Todos los derechos reservados.</span>
+        <div class="footer-legal"><a href="#">Aviso legal</a><a href="#">Política de privacidad</a><a href="#">Cookies</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL CONSULTA -->
+  <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <h3 id="modalTitle">Consultar disponibilidad</h3>
+      <p class="modal-product-ref" id="modalRef"></p>
+
+      <form id="modalForm" novalidate>
+        <input type="hidden" name="_subject" value="Consulta de producto – CERAMIUM" />
+        <input type="hidden" name="producto" id="hiddenProducto" />
+        <input type="hidden" name="categoria" id="hiddenCategoria" />
+
+        <div class="form-row-2">
+          <div class="form-group"><label for="mfname">Nombre *</label><input type="text" id="mfname" name="nombre" placeholder="Tu nombre" required /></div>
+          <div class="form-group"><label for="mfphone">Teléfono</label><input type="tel" id="mfphone" name="telefono" placeholder="6XX XXX XXX" /></div>
+        </div>
+        <div class="form-group"><label for="mfemail">Email *</label><input type="email" id="mfemail" name="email" placeholder="tucorreo@email.com" required /></div>
+        <div class="form-group"><label for="mfmsg">Mensaje *</label><textarea id="mfmsg" name="mensaje" required></textarea></div>
+
+        <button type="submit" class="btn-submit" id="modalSubmitBtn">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          Enviar consulta
+        </button>
+        <p class="form-note">* Campos obligatorios.</p>
+        <div class="toast" id="modalToast" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    /* ─── Hamburger ─── */
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+    });
+    function closeMobileNav() {
+      mobileNav.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    }
+
+    /* ─── Sticky header shadow ─── */
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+      header.style.boxShadow = window.scrollY > 10
+        ? '0 4px 20px rgba(27,42,59,.14)'
+        : '0 2px 8px rgba(27,42,59,.08)';
+    }, { passive: true });
+
+    /* ─── FILTRADO ─── */
+    const LABELS = {
+      todos:        'Todos los productos',
+      ceramica:     'Cerámica',
+      cementos:     'Cementos',
+      herramientas: 'Herramientas',
+      aislamiento:  'Aislamiento',
+      pavimentos:   'Pavimentos',
+    };
+
+    const cards      = document.querySelectorAll('.product-card');
+    const sidebtns   = document.querySelectorAll('.sidebar-cat-btn');
+    const chips      = document.querySelectorAll('.chip');
+    const areaTitle  = document.getElementById('areaTitle');
+    const areaCount  = document.getElementById('areaCount');
+    const emptyState = document.getElementById('emptyState');
+
+    function applyFilter(cat) {
+      let visible = 0;
+      cards.forEach(c => {
+        const match = cat === 'todos' || c.dataset.cat === cat;
+        c.classList.toggle('hidden', !match);
+        if (match) visible++;
+      });
+
+      /* actualiza sidebar */
+      sidebtns.forEach(b => b.classList.toggle('active', b.dataset.filter === cat));
+      /* actualiza chips */
+      chips.forEach(c => c.classList.toggle('active', c.dataset.filter === cat));
+
+      /* título área */
+      const label = LABELS[cat] || 'Productos';
+      areaTitle.innerHTML = `${label} <span id="areaCount">(${visible} artículo${visible !== 1 ? 's' : ''})</span>`;
+
+      /* estado vacío */
+      emptyState.classList.toggle('show', visible === 0);
+
+      /* actualiza URL sin recargar */
+      const url = new URL(window.location);
+      cat === 'todos' ? url.searchParams.delete('cat') : url.searchParams.set('cat', cat);
+      history.replaceState(null, '', url);
+    }
+
+    sidebtns.forEach(b => b.addEventListener('click', () => applyFilter(b.dataset.filter)));
+    chips.forEach(c    => c.addEventListener('click', () => applyFilter(c.dataset.filter)));
+
+    /* Leer parámetro URL al cargar (desde links del index) */
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const cat    = params.get('cat');
+      if (cat && LABELS[cat]) applyFilter(cat);
+    })();
+
+    /* ─── Scroll reveal ─── */
+    const revealEls = document.querySelectorAll('.reveal');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    revealEls.forEach(el => obs.observe(el));
+
+    /* ─── MODAL ─── */
+    const overlay       = document.getElementById('modalOverlay');
+    const modalClose    = document.getElementById('modalClose');
+    const modalTitle    = document.getElementById('modalTitle');
+    const modalRef      = document.getElementById('modalRef');
+    const hiddenProd    = document.getElementById('hiddenProducto');
+    const hiddenCat     = document.getElementById('hiddenCategoria');
+    const mfmsg         = document.getElementById('mfmsg');
+
+    function openModal(producto, categoria) {
+      hiddenProd.value = producto;
+      hiddenCat.value  = categoria;
+      modalTitle.textContent = 'Consultar disponibilidad';
+      modalRef.textContent   = '📦 Producto: ' + producto;
+      mfmsg.value = `Hola, me gustaría consultar la disponibilidad del producto: ${producto}.\n\n`;
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      document.getElementById('mfname').focus();
+    }
+
+    function closeModal() {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+      document.getElementById('modalToast').className = 'toast';
+    }
+
+    modalClose.addEventListener('click', closeModal);
+    overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    /* ─── Formulario modal → Formspree ─── */
+    const FORMSPREE    = 'https://formspree.io/f/xjgqkwkd';
+    const modalForm    = document.getElementById('modalForm');
+    const modalSubmit  = document.getElementById('modalSubmitBtn');
+    const modalToast   = document.getElementById('modalToast');
+
+    modalForm.addEventListener('submit', async e => {
+      e.preventDefault();
+      const nombre  = document.getElementById('mfname').value.trim();
+      const email   = document.getElementById('mfemail').value.trim();
+      const mensaje = document.getElementById('mfmsg').value.trim();
+
+      if (!nombre || !email || !mensaje) {
+        alert('Por favor, completa los campos obligatorios: Nombre, Email y Mensaje.');
+        return;
+      }
+
+      const origHTML = modalSubmit.innerHTML;
+      modalSubmit.disabled = true;
+      modalSubmit.innerHTML = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:spin .8s linear infinite"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Enviando…';
+
+      try {
+        const res = await fetch(FORMSPREE, {
+          method: 'POST',
+          body: new FormData(modalForm),
+          headers: { Accept: 'application/json' }
+        });
+
+        if (res.ok) {
+          modalToast.className = 'toast ok show';
+          modalToast.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> ¡Consulta enviada! Te responderemos pronto.';
+          modalForm.reset();
+          setTimeout(closeModal, 2800);
+        } else {
+          throw new Error('server');
+        }
+      } catch {
+        modalToast.className = 'toast err show';
+        modalToast.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Error al enviar. Llámanos al 985 00 00 00.';
+      } finally {
+        modalSubmit.disabled = false;
+        modalSubmit.innerHTML = origHTML;
+      }
+    });
+  </script>
+</body>
+</html>
